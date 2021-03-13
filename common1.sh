@@ -1,11 +1,13 @@
 #!/bin/bash
 
 Diy_n1() {
-KERNEL_VERSION="5.4.101-flippy-54+o"
-VERSION="5.4.101"
+KERNEL_VERSION="5.4.105-flippy-55+o"
+VERSION="5.4.105"
+TIME="20210312"
 mkdir opt
 chmod  -R 777 opt
-tar -xzvf mk_openwrt_src_20210304.tar.gz -C opt
+wget https://github.com/haohaoget/N1/releases/download/${VERSION}/mk_openwrt_src_${TIME}.tar.gz
+tar -xzvf mk_openwrt_src_${TIME}.tar.gz -C opt
 cp openwrt/bin/targets/armvirt/*/*.tar.gz opt/openwrt    
 cd opt
 mkdir imgs
