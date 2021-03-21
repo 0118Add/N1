@@ -6,7 +6,7 @@ VERSION="5.4.105"
 TIME="20210312"
 mkdir opt
 chmod  -R 777 opt
-wget https://github.com/haohaoget/N1/releases/download/${VERSION}/mk_openwrt_src_${TIME}.tar.gz
+wget https://github.com/0118Add/N1/releases/download/${VERSION}/mk_openwrt_src_${TIME}.tar.gz
 tar -xzvf mk_openwrt_src_${TIME}.tar.gz -C opt
 cp openwrt/bin/targets/armvirt/*/*.tar.gz opt/openwrt    
 cd opt
@@ -15,7 +15,7 @@ chmod  -R 777 imgs
 echo "PATH2=${GITHUB_WORKSPACE}/opt/imgs" >> $GITHUB_ENV
 cd imgs
 pathimg=$PWD
-wget https://github.com/haohaoget/N1/releases/download/${VERSION}/Armbian_20.10_Aml-s9xxx_buster_${KERNEL_VERSION}.img.xz
+wget https://github.com/0118Add/N1/releases/download/${VERSION}/Armbian_20.10_Aml-s9xxx_buster_${KERNEL_VERSION}.img.xz
 unxz Armbian_20.10_Aml-s9xxx_buster_${KERNEL_VERSION}.img.xz
 cd ../
 cd openwrt
